@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">Langue</string>
+    <string name="this_action_may_contain_advertising">Cette action peut contenir de la publicité</string>
+    <string name="transparency">Transparence</string>
+    <string name="reveal_your_screens_beauty">Révélez la beauté de votre écran avec Wallpaper Transparent.</string>
+    <string name="crystal">Cristal</string>
+    <string name="clarity_and_style">Clarté et style se rencontrent dans Wallpaper Transparent.</string>
+    <string name="clearvision">Vision Claire</string>
+    <string name="elevate_your_screens_allure">Élevez l\'attrait de votre écran avec Wallpaper Transparent.</string>
+    <string name="next">Suivant</string>
+    <string name="transparent_wallpaper">Wallpaper Transparent</string>
+    <string name="Rate">Évaluer</string>
+    <string name="Share">Partager</string>
+    <string name="Feedback">Retour d\'information</string>
+    <string name="Policy">Politique</string>
+    <string name="Explore">Explorer</string>
+    <string name="lock_screen">Écran de verrouillage</string>
+    <string name="home_screen">Écran d\'accueil</string>
+    <string name="both">Les deux</string>
+    <string name="lock_screen_wallpaper_set_successfully">Fond d\'écran de verrouillage défini avec succès</string>
+    <string name="done">Terminé</string>
+    <string name="hd_wallpapers">Fonds d\'écran HD</string>
+    <string name="set_wallpapers">Définir les fonds d\'écran</string>
+    <string name="swipe_to_see_more">Balayez pour voir plus</string>
+    <string name="set_wallpaper">Définir le fond d\'écran</string>
+    <string name="typing_wallpaper">Fond d\'écran de saisie</string>
+    <string name="mirror_wallpaper">Fond d\'écran miroir</string>
+    <string name="select_option">SÉLECTIONNER L\'OPTION</string>
+    <string name="ok">D\'accord</string>
+    <string name="how_is_your_experience">Comment est votre expérience</string>
+    <string name="your_opinion_means_to_us">Votre opinion compte pour nous</string>
+
+</resources>

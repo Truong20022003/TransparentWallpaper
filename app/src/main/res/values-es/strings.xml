@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">Idioma</string>
+    <string name="this_action_may_contain_advertising">Esta acción puede contener publicidad</string>
+    <string name="transparency">Transparencia</string>
+    <string name="reveal_your_screens_beauty">Revela la belleza de tu pantalla con Wallpaper Transparente.</string>
+    <string name="crystal">Cristal</string>
+    <string name="clarity_and_style">Claridad y estilo se encuentran en Wallpaper Transparente.</string>
+    <string name="clearvision">Visión Clara</string>
+    <string name="elevate_your_screens_allure">Eleva el atractivo de tu pantalla con Wallpaper Transparente.</string>
+    <string name="next">Siguiente</string>
+    <string name="transparent_wallpaper">Wallpaper Transparente</string>
+    <string name="Rate">Calificar</string>
+    <string name="Share">Compartir</string>
+    <string name="Feedback">Retroalimentación</string>
+    <string name="Policy">Política</string>
+    <string name="Explore">Explorar</string>
+    <string name="lock_screen">Pantalla de bloqueo</string>
+    <string name="home_screen">Pantalla de inicio</string>
+    <string name="both">Ambos</string>
+    <string name="lock_screen_wallpaper_set_successfully">Fondo de pantalla de bloqueo configurado con éxito</string>
+    <string name="done">Hecho</string>
+    <string name="hd_wallpapers">Fondos de pantalla HD</string>
+    <string name="set_wallpapers">Establecer fondos de pantalla</string>
+    <string name="swipe_to_see_more">Desliza para ver más</string>
+    <string name="set_wallpaper">Establecer fondo de pantalla</string>
+    <string name="typing_wallpaper">Fondo de pantalla de escritura</string>
+    <string name="mirror_wallpaper">Fondo de pantalla espejo</string>
+    <string name="select_option">SELECCIONAR OPCIÓN</string>
+    <string name="ok">Ok</string>
+    <string name="how_is_your_experience">¿Cómo es tu experiencia?</string>
+    <string name="your_opinion_means_to_us">Tu opinión es importante para nosotros</string>
+
+</resources>

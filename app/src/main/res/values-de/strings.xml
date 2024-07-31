@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">Sprache</string>
+    <string name="this_action_may_contain_advertising">Diese Aktion kann Werbung enthalten</string>
+    <string name="transparency">Transparenz</string>
+    <string name="reveal_your_screens_beauty">Enthülle die Schönheit deines Bildschirms mit Transparentem Wallpaper.</string>
+    <string name="crystal">Kristall</string>
+    <string name="clarity_and_style">Klarheit und Stil treffen sich im Transparenten Wallpaper.</string>
+    <string name="clearvision">Klare Vision</string>
+    <string name="elevate_your_screens_allure">Erhöhe den Reiz deines Bildschirms mit Transparentem Wallpaper.</string>
+    <string name="next">Weiter</string>
+    <string name="transparent_wallpaper">Transparentes Wallpaper</string>
+    <string name="Rate">Bewerten</string>
+    <string name="Share">Teilen</string>
+    <string name="Feedback">Feedback</string>
+    <string name="Policy">Richtlinie</string>
+    <string name="Explore">Erkunden</string>
+    <string name="lock_screen">Sperrbildschirm</string>
+    <string name="home_screen">Startbildschirm</string>
+    <string name="both">Beide</string>
+    <string name="lock_screen_wallpaper_set_successfully">Sperrbildschirm-Hintergrund erfolgreich eingestellt</string>
+    <string name="done">Fertig</string>
+    <string name="hd_wallpapers">HD-Hintergründe</string>
+    <string name="set_wallpapers">Hintergründe festlegen</string>
+    <string name="swipe_to_see_more">Zum Anzeigen mehr wischen</string>
+    <string name="set_wallpaper">Hintergrund festlegen</string>
+    <string name="typing_wallpaper">Tipp-Hintergrund</string>
+    <string name="mirror_wallpaper">Spiegel-Hintergrund</string>
+    <string name="select_option">OPTION WÄHLEN</string>
+    <string name="ok">Ok</string>
+    <string name="how_is_your_experience">Wie ist Ihre Erfahrung</string>
+    <string name="your_opinion_means_to_us">Ihre Meinung ist uns wichtig</string>
+
+</resources>

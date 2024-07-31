@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">Bahasa</string>
+    <string name="this_action_may_contain_advertising">Tindakan ini mungkin mengandung iklan</string>
+    <string name="transparency">Transparansi</string>
+    <string name="reveal_your_screens_beauty">Ungkapkan keindahan layar Anda dengan Wallpaper Transparan.</string>
+    <string name="crystal">Kristal</string>
+    <string name="clarity_and_style">Kejernihan dan gaya bertemu dalam Wallpaper Transparan.</string>
+    <string name="clearvision">Visi Jernih</string>
+    <string name="elevate_your_screens_allure">Tingkatkan daya tarik layar Anda dengan Wallpaper Transparan.</string>
+    <string name="next">Berikutnya</string>
+    <string name="transparent_wallpaper">Wallpaper Transparan</string>
+    <string name="Rate">Nilai</string>
+    <string name="Share">Bagikan</string>
+    <string name="Feedback">Umpan Balik</string>
+    <string name="Policy">Kebijakan</string>
+    <string name="Explore">Mengeksplorasi</string>
+    <string name="lock_screen">Layar kunci</string>
+    <string name="home_screen">Layar beranda</string>
+    <string name="both">Kedua-duanya</string>
+    <string name="lock_screen_wallpaper_set_successfully">Wallpaper layar kunci berhasil diatur</string>
+    <string name="done">Selesai</string>
+    <string name="hd_wallpapers">Wallpaper HD</string>
+    <string name="set_wallpapers">Setel Wallpaper</string>
+    <string name="swipe_to_see_more">Geser untuk melihat lebih banyak</string>
+    <string name="set_wallpaper">Setel Wallpaper</string>
+    <string name="typing_wallpaper">Wallpaper Mengetik</string>
+    <string name="mirror_wallpaper">Wallpaper Cermin</string>
+    <string name="select_option">PILIH OPSI</string>
+    <string name="ok">Ok</string>
+    <string name="how_is_your_experience">Bagaimana pengalaman Anda</string>
+    <string name="your_opinion_means_to_us">Pendapat Anda berarti bagi kami</string>
+
+</resources>

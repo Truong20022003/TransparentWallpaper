@@ -1,0 +1,65 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+}
+
+android {
+    namespace 'com.example.wallpaper'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.wallpaper"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //ads
+        multiDexEnabled true
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pgcfg'        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding = true
+
+    }
+
+
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation("com.tbuonomo:dotsindicator:4.3")
+    implementation("com.airbnb.android:lottie:6.0.0")
+
+    //ads
+    implementation("com.github.vtd-admob-sdk:AdmobLib:1.0.0")
+    implementation("com.google.android.gms:play-services-ads:23.2.0")
+    //multidex
+    implementation("androidx.multidex:multidex:2.0.1")
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //shimmer fb
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+}

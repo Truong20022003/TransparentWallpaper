@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Screen.SetWallpaper.SetWallPaperActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_background_sao">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cst_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitle_hdwallpaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:fontFamily="@font/angkor_regular"
+                android:text="@string/set_wallpapers"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpage2SetWallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="438sp"
+                app:layout_constraintTop_toBottomOf="@+id/cst_Title"
+                />
+
+        <LinearLayout
+            android:id="@+id/custom_dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewpage2SetWallpaper"/>
+
+        <!--        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator-->
+<!--            android:id="@+id/worm_dots_indicatorSetWall"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:dotsColor="#667085"-->
+<!--            app:selectedDotColor="#ffffff"-->
+<!--            app:dotsCornerRadius="8dp"-->
+<!--            app:dotsSize="12dp"-->
+
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/viewpage2SetWallpaper"-->
+<!--            />-->
+
+        <TextView
+            android:id="@+id/tvSwipe_to_see_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:text="@string/swipe_to_see_more"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/custom_dots_indicator" />
+
+        <Button
+            android:id="@+id/btnSetWallpaper"
+            android:layout_width="156sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25sp"
+            android:background="@drawable/custom_button_set_wallpaper"
+            android:fontFamily="@font/plusjakartasans_bold"
+            android:text="@string/set_wallpaper"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSwipe_to_see_more" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
