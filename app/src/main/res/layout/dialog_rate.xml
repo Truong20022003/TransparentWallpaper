@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
 
             android:text="@string/how_is_your_experience"
-            android:textColor="#121212"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
         <TextView
@@ -60,12 +60,12 @@
             android:layout_marginTop="30sp"
             android:text="@string/Rate"
             android:textAllCaps="false"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:layout_marginBottom="10sp"
 
             style="?android:attr/borderlessButtonStyle"
-            android:background="@drawable/custom_item_language"
+            android:background="@drawable/custom_button_set_wallpaper"
             app:layout_constraintBottom_toBottomOf="parent" />
 
     </LinearLayout>

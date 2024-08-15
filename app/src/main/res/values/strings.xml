@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name" translatable="false">Wallpaper</string>
     <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_app_open_id" translatable="false">ca-app-pub-3940256099942544/9257395921</string>
     <string name="admob_banner_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="admob_native_id" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+    <string name="admob_Rewarded_ads_id" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="admob_Collapsible_id" translatable="false">ca-app-pub-3940256099942544/2014213617</string>
+    <string name="admob_Interstitial_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="language">Language</string>

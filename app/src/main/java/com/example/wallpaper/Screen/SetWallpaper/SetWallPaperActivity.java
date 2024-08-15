@@ -1,14 +1,20 @@
 package com.example.wallpaper.Screen.SetWallpaper;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.WallpaperManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.Outline;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewOutlineProvider;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -17,8 +23,14 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.amazic.ads.util.AppOpenManager;
+import com.amazic.ads.util.manager.native_ad.NativeBuilder;
+import com.amazic.ads.util.manager.native_ad.NativeManager;
 import com.example.wallpaper.R;
 import com.example.wallpaper.Model.HdWallpaperModel;
+import com.example.wallpaper.Screen.HD_Wallpaper.HDWallpaper;
+import com.example.wallpaper.Screen.Home.TransparentWallpaper;
+import com.example.wallpaper.Until.SharePrefRemote;
 import com.example.wallpaper.ViewModel.BaseViewModel.BaseActivityViewModel;
 import com.example.wallpaper.ViewModel.SetWallpaperViewModel;
 import com.example.wallpaper.databinding.ActivitySetWallPaperBinding;
@@ -31,7 +43,9 @@ import java.util.List;
 public class SetWallPaperActivity extends BaseActivityViewModel<ActivitySetWallPaperBinding, SetWallpaperViewModel> {
 
     private List<HdWallpaperModel> list;
-
+    private FrameLayout nativeframe_ads;
+    NativeManager nativeManager;
+    private AppOpenManager appOpenManager;
     @Override
     protected ActivitySetWallPaperBinding createBinding() {
         return ActivitySetWallPaperBinding.inflate(getLayoutInflater());
@@ -65,6 +79,12 @@ public class SetWallPaperActivity extends BaseActivityViewModel<ActivitySetWallP
         list.add(new HdWallpaperModel(8, R.drawable.img_content_5));
         list.add(new HdWallpaperModel(9, R.drawable.img_content_5));
         list.add(new HdWallpaperModel(10, R.drawable.img_content_3));
+        binding.imgBackT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateTo(HDWallpaper.class);
+            }
+        });
 
         SetWallViewPager2Adapter adapter = new SetWallViewPager2Adapter(list, binding.viewpage2SetWallpaper);
         binding.viewpage2SetWallpaper.setAdapter(adapter);
@@ -105,6 +125,29 @@ public class SetWallPaperActivity extends BaseActivityViewModel<ActivitySetWallP
         binding.viewpage2SetWallpaper.setCurrentItem(position);
 
         binding.btnSetWallpaper.setOnClickListener(v -> showDialogChoose());
+
+        nativeframe_ads = binding.nativeframeSetWallAds;
+        appOpenManager = AppOpenManager.getInstance();
+
+        try {
+            if (SharePrefRemote.get_config(this, SharePrefRemote.native_language)) {
+                nativeframe_ads.setVisibility(View.VISIBLE);
+                List<String> list = new ArrayList<>();
+                list.add(getString(R.string.admob_native_id));
+                NativeBuilder builder = new NativeBuilder(this, nativeframe_ads,
+                        R.layout.ads_shimmer_intro_layout, R.layout.ads_native_intro_layout);
+                builder.setListIdAd(list);
+                nativeManager = new NativeManager(this, this, builder);
+
+            } else {
+                nativeframe_ads.removeAllViews();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            nativeframe_ads.removeAllViews();
+            nativeframe_ads.setVisibility(View.INVISIBLE);
+        }
     }
 
 
@@ -112,10 +155,11 @@ public class SetWallPaperActivity extends BaseActivityViewModel<ActivitySetWallP
         LayoutInflater layoutInflater = getLayoutInflater();
         DialogChooseScreenBinding dialogChooseScreenBinding = DialogChooseScreenBinding.inflate(layoutInflater);
         AlertDialog.Builder builder = new AlertDialog.Builder(SetWallPaperActivity.this);
+
         builder.setView(dialogChooseScreenBinding.getRoot());
         AlertDialog dialog = builder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
-
         dialogChooseScreenBinding.cstLockScreen.setOnClickListener(v -> {
             dialogChooseScreenBinding.imgradioLockScreen.setVisibility(View.VISIBLE);
             dialogChooseScreenBinding.imgradioHomeScreen.setVisibility(View.GONE);
@@ -172,6 +216,8 @@ public class SetWallPaperActivity extends BaseActivityViewModel<ActivitySetWallP
             }
         });
     }
+
+
 
 
 }

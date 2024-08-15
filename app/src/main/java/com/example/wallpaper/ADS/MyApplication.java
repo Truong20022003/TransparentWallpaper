@@ -1,21 +1,23 @@
 package com.example.wallpaper.ADS;
 
+import android.app.Application;
 import androidx.annotation.NonNull;
-
-
 import com.amazic.ads.util.AdsApplication;
 import com.amazic.ads.util.AppOpenManager;
+import com.example.wallpaper.R;
 import com.example.wallpaper.Screen.SplashScreen;
 
 public class MyApplication extends AdsApplication {
 
     public static String PRODUCT_ID_MONTH = "android.test.purchased";
+
     @Override
     public void onCreate() {
         super.onCreate();
         AppOpenManager.getInstance().disableAppResumeWithActivity(SplashScreen.class);
-        //init Appsflyer
-        //AppsflyerEvent.getInstance().init(this, "1233", true);
+
+        // Initialize AppOpenManager here
+        AppOpenManager.getInstance().init(this, getString(R.string.admob_app_open_id));
     }
 
     @NonNull
@@ -37,23 +39,11 @@ public class MyApplication extends AdsApplication {
 
     @Override
     protected String initAppOpenResume() {
-        return null;
+        return getString(R.string.admob_app_open_id);
     }
 
     @Override
     protected boolean isSetUpAdjust() {
-        return false;
+        return true;
     }
-
-//    // set id app open resume
-//    @Override
-//    protected String initAppOpenResume() {
-//        return "ca-app-pub-3940256099942544/9257395921";
-//    }
-//
-//    // yêu cầu dùng Adjust thì set = true không dùng thì set = false
-//    @Override
-//    protected boolean isSetUpAdjust() {
-//        return true;
-//    }
 }

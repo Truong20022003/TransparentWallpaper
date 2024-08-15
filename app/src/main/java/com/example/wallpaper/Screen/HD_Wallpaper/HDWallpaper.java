@@ -2,16 +2,25 @@ package com.example.wallpaper.Screen.HD_Wallpaper;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.amazic.ads.callback.AdCallback;
+import com.amazic.ads.callback.InterCallback;
+import com.amazic.ads.util.Admob;
+import com.amazic.ads.util.AdsConsentManager;
+import com.amazic.ads.util.AdsSplash;
 import com.example.wallpaper.Model.HdWallpaperModel;
 import com.example.wallpaper.R;
+import com.example.wallpaper.Screen.Home.TransparentWallpaper;
 import com.example.wallpaper.Screen.SetWallpaper.SetWallPaperActivity;
 import com.example.wallpaper.ViewModel.BaseViewModel.BaseActivityViewModel;
 import com.example.wallpaper.ViewModel.HDWallpaperViewModel;
 import com.example.wallpaper.databinding.ActivityHdwallpaperBinding;
+import com.google.android.gms.ads.LoadAdError;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +29,7 @@ public class HDWallpaper extends BaseActivityViewModel<ActivityHdwallpaperBindin
 
     public List<HdWallpaperModel> list;
     private HdWallpaperAdapter adapter;
+    private int currentPosition = -1;
 
     @Override
     protected ActivityHdwallpaperBinding createBinding() {
@@ -42,7 +52,12 @@ public class HDWallpaper extends BaseActivityViewModel<ActivityHdwallpaperBindin
         EdgeToEdge.enable(this);
         binding = ActivityHdwallpaperBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+binding.imgBackk.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        navigateTo(TransparentWallpaper.class);
+    }
+});
         list = new ArrayList<>();
 
         list.add(new HdWallpaperModel(1, R.drawable.img_content_1));
@@ -66,10 +81,7 @@ public class HDWallpaper extends BaseActivityViewModel<ActivityHdwallpaperBindin
         adapter.setOnItemClick(new OnclickItem() {
             @Override
             public void Onclick(int position) {
-                Intent intent = new Intent(HDWallpaper.this, SetWallPaperActivity.class);
-                intent.putExtra("position",position);
-                startActivity(intent);
-
+                navigateToAddPosition(SetWallPaperActivity.class,position);
             }
         });
 

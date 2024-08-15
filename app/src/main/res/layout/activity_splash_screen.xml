@@ -59,12 +59,5 @@
             android:textColor="#ffffff"/>
 
     </LinearLayout>
-    <FrameLayout
-        android:id="@+id/native_ads"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        >
-        <include layout="@layout/ads_native_shimer" />
-    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

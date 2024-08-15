@@ -17,7 +17,7 @@
             android:id="@+id/cst_Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50sp"
+            android:layout_marginTop="10sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -25,6 +25,7 @@
 
             <ImageView
                 android:layout_width="24dp"
+                android:id="@+id/imgBackT"
                 android:layout_height="24dp"
                 android:layout_marginStart="12dp"
                 android:src="@drawable/ic_back"
@@ -51,7 +52,7 @@
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpage2SetWallpaper"
                 android:layout_width="match_parent"
-                android:layout_height="438sp"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/cst_Title"
                 />
 
@@ -94,7 +95,7 @@
             android:id="@+id/btnSetWallpaper"
             android:layout_width="156sp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25sp"
+            android:layout_marginTop="10sp"
             android:background="@drawable/custom_button_set_wallpaper"
             android:fontFamily="@font/plusjakartasans_bold"
             android:text="@string/set_wallpaper"
@@ -103,7 +104,21 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvSwipe_to_see_more" />
+        <FrameLayout
+            android:id="@+id/nativeframeSetWall_ads"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSetWallpaper"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHeight_default="wrap"
+            android:layout_marginHorizontal="16sp">
 
+            <include layout="@layout/ads_native_shimer" />
+
+        </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -67,7 +67,7 @@ public class SharePrefRemote {
 
     public static long get_config_long(Context context, String name_config) {
         SharedPreferences pre = context.getSharedPreferences("remote_fill", Context.MODE_PRIVATE);
-        return pre.getLong(name_config, 15);
+        return pre.getLong(name_config, 0)*1000;
     }
 
     public static String get_config_string(Context context, String name_config) {

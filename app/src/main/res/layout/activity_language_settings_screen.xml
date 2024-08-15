@@ -8,9 +8,11 @@
     tools:context=".Screen.Settings.Language.LanguageSettingsScreen"
     android:background="#000000">
     <LinearLayout
+        android:id="@+id/ln23"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/img_background_sao">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -55,8 +57,19 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvFrag"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             tools:listitem="@layout/item_languagescreen"
             />
+        <FrameLayout
+            android:id="@+id/native_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginHorizontal="16sp"
+
+            >
+            <include layout="@layout/ads_native_shimer" />
+        </FrameLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
